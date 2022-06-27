@@ -14,7 +14,7 @@ class BinarySearchTree:
             self.root = new_node
             return True
         temp = self.root
-        while (True):
+        while (True):#we will loop forever until while is True i.e until insertion is fully done
             if temp.value == new_node.value:
                 return False
             if new_node.value < temp.value:#left
@@ -27,6 +27,20 @@ class BinarySearchTree:
                     temp.right = new_node
                     return  True
                 temp = temp.right
+    
+    def contain(self,value):
+        temp = self.root
+        while temp is not None:
+            if value < temp.value:
+                temp = temp.left
+            elif value > temp.value:
+                temp = temp.right
+            else:
+                return True
+        return False#temp is None
+    
+                
+            
             
                 
             
@@ -44,5 +58,7 @@ my_tree.insert(11)
 print(my_tree.root.value)
 print(my_tree.root.left.value)
 print(my_tree.root.right.value)
+print(my_tree.contain(3))
+print(my_tree.contain(17))
 
 
