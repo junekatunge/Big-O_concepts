@@ -8,18 +8,18 @@ from tkinter import N
 class Node:
     def __init__(self,value):
         self.value =value
-        self.next = None
-#we create a class for printing a list       
+        self.next = None 
+#we create a class for a list      
 class Linkedlist:
     def __init__(self,value):#function of a constructor is to assign values to object when an object is created here a node is created
         new_node = Node(value)
         self.head = new_node
         self.tail = new_node
         self.length = 1
-        
+#we create a function for printing a list        
     def print_list(self):
         temp = self.head
-        while temp is not None:         
+        while temp is not None:      #this will iterate until the condition is false   #mbaka saa kumi
             print(temp.value)
             #then we move to the next value
             temp = temp.next
