@@ -2,14 +2,14 @@
 
 class Node:
     def __init__(self,value):
-        self.value = value
+        # self.value = value
         self.next = None
         self.prev = None
 
 class DoubleLinkedList:
     #creating the first node
-    def __init__(self,value):
-        new_node = Node(value)
+    def __init__(self):
+        new_node = Node()
         self.head = new_node
         self.tail = new_node
         self.length = 1
