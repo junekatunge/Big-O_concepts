@@ -17,7 +17,7 @@ class Linkedlist:#to create a linked list
             print (temp.value)
             temp = temp.next
     
-    def push_back(self,value):#append
+    def push_back(self,value):#append  
         new_node = Node(value)
         if self.length == 0:
             self.head = new_node
