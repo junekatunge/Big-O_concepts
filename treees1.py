@@ -28,14 +28,14 @@ class BinarySearchTree:
         return False
     def contain(self,value):
         temp = self.root
-        while temp is not None:
+        while temp is not None:#while the item is in the tree/while temp is still pointing to a node
             if value < temp.value:
                 temp = temp.left
             if value > temp.value:
                 temp = temp.right
             else:
                 return True
-        return False
+        return False#if the item is not in the tree
             
         
                 
