@@ -1,3 +1,6 @@
+
+
+
 class Node:#creating how the node should appear
     def __init__(self,value):
         self.value=value
@@ -44,6 +47,20 @@ class BinarySearchTree:
         while current.left is not None:
             current = current.left
         return current.value#if current.left is None that means we have already found the least node
+    
+    def delete_value(self,value):
+        if self.root == None:
+            return False
+        temp = self.root
+        while (True):
+            if value < temp.value:
+                temp = temp.left
+            if value > temp.right:
+                temp = temp.right
+            else:
+                temp.DeleteValue
+        return False
+            
     
     
     
